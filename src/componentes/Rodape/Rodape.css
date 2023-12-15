@@ -1,0 +1,14 @@
+.rodape {
+    background-color: #55afc5;
+    color: azure;
+    max-width: 100%;
+    text-align: center;
+    padding: 6px;
+}
+
+
+.rodape a{
+    text-decoration: none;
+    color: azure;
+    font-size: 14px;
+}
