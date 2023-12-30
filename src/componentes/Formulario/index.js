@@ -19,10 +19,10 @@ const Formulario = (props) => {
           imagem,
           empresa
       })
-      // setNome('')
-      // setAno('')
-      // setImagem('')
-      // setEmpresa('')
+      setNome('')
+      setAno('')
+      setImagem('')
+      setEmpresa('')
       }
 
     return (

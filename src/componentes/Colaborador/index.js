@@ -1,6 +1,6 @@
 import "./Colaborador.css"
 
-const Colaborador = ({nome,ano,imagem}) => {
+const Colaborador = ({nome,ano,imagem,corDeFundo}) => {
 
     return (
        <div className="colaborador">

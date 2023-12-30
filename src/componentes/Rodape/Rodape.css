@@ -1,3 +1,28 @@
+.rodape_container {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+}
+
+.rodape_logos {
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    align-items: center;
+}
+
+.rodape_logos li {
+    list-style-type: none;
+}
+
+.rodape_logos img {
+    max-height: 50%;
+}
+
+.rodape_container div h5 {
+    font-size: 16px;
+}
+
 .rodape {
     background-color: #55afc5;
     color: azure;
@@ -7,7 +32,7 @@
 }
 
 
-.rodape a{
+.rodape_link a{
     text-decoration: none;
     color: azure;
     font-size: 14px;
