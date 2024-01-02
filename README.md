@@ -1,3 +1,5 @@
+![banner_videogames](https://github.com/Israel-w-costa/React-organo/assets/127890664/6a193430-09ed-4ae3-a1a2-32d1d54769c6)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
