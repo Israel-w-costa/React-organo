@@ -6,7 +6,11 @@ const Empresa = (props) => {
        (props.colaboradores.length >0) && <section className='empresa' style={{ backgroundColor: props.corSecundaria }}>
             <h3>{props.nome}</h3>
             <div className='colaboradores'>
-                {props.colaboradores.map( colaborador => <Colaborador  key={colaborador.nome} nome={colaborador.nome} ano ={colaborador.ano} imagem={colaborador.imagem} /> )}
+                {props.colaboradores.map( colaborador => 
+              {
+              return  <Colaborador  key={colaborador.nome} nome={colaborador.nome} ano ={colaborador.ano} imagem={colaborador.imagem} aodeletar={colaborador.aoDeletar} /> 
+              }
+              )}
             </div>
         </section>
     )

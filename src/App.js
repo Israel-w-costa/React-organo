@@ -37,6 +37,10 @@ function App() {
     }
 ]
 
+  function deletaColaborador () {
+    console.log ('deletando colaborador')
+  }
+
   
  
   return (
@@ -44,12 +48,15 @@ function App() {
     <div className='App'> 
       <Banner/>
       <Formulario empresas={empresas.map(empresa=>empresa.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
-      {empresas.map(empresa =><Empresa
-      key={empresa.nome} 
-      nome={empresa.nome} 
-      corSecundaria={empresa.corSecundaria}
-      colaboradores={colaboradores.filter(colaborador=>colaborador.empresa === empresa.nome)}
-      />)}
+      {empresas.map(empresa =>
+        <Empresa
+          key={empresa.nome} 
+          nome={empresa.nome} 
+          corSecundaria={empresa.corSecundaria}
+          colaboradores={colaboradores.filter(colaborador=>colaborador.empresa === empresa.nome)}
+          aoDeletar={deletaColaborador}
+          />)
+      }
 
       <Rodape/>
     </div>

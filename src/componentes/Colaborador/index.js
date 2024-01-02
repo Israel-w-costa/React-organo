@@ -1,21 +1,21 @@
 import "./Colaborador.css"
 
-const Colaborador = ({nome,ano,imagem,corDeFundo}) => {
+const Colaborador = (props) => {
 
     return (
        <div className="colaborador">
-        
+        <div className="deletar" onClick={props.aoDeletar}>deletar</div>
         <div className="cabecalho">
-            <img src={imagem} alt= {nome} ></img>
+            <img src={props.imagem} alt= {props.nome} ></img>
         </div>
 
         <div className="rodape">
-        <h5>
-        {nome}
-        </h5>
-        <h4>
-        {ano}
-        </h4>
+            <h5>
+            {props.nome}
+            </h5>
+            <h4>
+            {props.ano}
+            </h4>
         </div>
 
        </div>
