@@ -37,7 +37,7 @@ function App() {
     }
 ]
 
-  function deletaColaborador () {
+  function botaoDeletar () {
     console.log ('deletando colaborador')
   }
 
@@ -54,7 +54,7 @@ function App() {
           nome={empresa.nome} 
           corSecundaria={empresa.corSecundaria}
           colaboradores={colaboradores.filter(colaborador=>colaborador.empresa === empresa.nome)}
-          aoDeletar={deletaColaborador}
+          aoDeletar={botaoDeletar}
           />)
       }
 
