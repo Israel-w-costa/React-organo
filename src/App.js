@@ -14,32 +14,41 @@ function App() {
 
   }
 
-  const empresas = [
+  const [empresas,setempresas] = useState( [
     {
         nome: 'Nintendo',
-        corSecundaria: '#e73f4d',
+        cor: '#e73f4d',
     },
     {
         nome: 'Playtation',
-        corSecundaria: '#52D3D8',
+        cor: '#52D3D8',
     },
     {
         nome: 'Xbox',
-        corSecundaria: '#65B741',
+        cor: '#65B741',
     },
     {
         nome: 'Pc',
-        corSecundaria: '#808080',
+        cor: '#808080',
     },
     {
         nome: 'Mobile',
-        corSecundaria: '#F4F27E  ',
+        cor: '#F4F27E  ',
     }
-]
+])
 
   function botaoDeletar () {
     console.log ('deletando colaborador')
   }
+
+  function mudarCorDaEmpresa(cor, nome) {
+    setempresas(empresas.map(empresa => {
+        if(empresa.nome=== nome) {
+            empresa.cor = cor;
+        }
+        return empresa;
+    }));
+}
 
   
  
@@ -50,9 +59,10 @@ function App() {
       <Formulario empresas={empresas.map(empresa=>empresa.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       {empresas.map(empresa =>
         <Empresa
+          mudarCor={mudarCorDaEmpresa}
           key={empresa.nome} 
           nome={empresa.nome} 
-          corSecundaria={empresa.corSecundaria}
+          cor={empresa.cor}
           colaboradores={colaboradores.filter(colaborador=>colaborador.empresa === empresa.nome)}
           aoDeletar={botaoDeletar}
           />)
