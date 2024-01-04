@@ -10,6 +10,8 @@ const Formulario = (props) => {
       const [ano, setAno] = useState ("")
       const [imagem, setImagem] = useState ("")
       const [empresa, setEmpresa] = useState ("")
+      const [novaEmpresa, setnovaEmpresa] = useState ("")
+      const [novaCor, setnovaCor] = useState ("")
 
       const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -53,6 +55,30 @@ const Formulario = (props) => {
                   aoAlterado={valor=>setEmpresa(valor)}
                   />
                 <Botao> Cria Card </Botao>
+            </form>
+            <form onSubmit={
+              (evento)=> {
+              evento.preventDefault()
+              props.cadastrarEmpresa(
+                {nome:novaEmpresa, cor: novaCor}
+              )
+              setnovaCor('')
+              setnovaEmpresa('')
+              }}>
+            <h2>Preença os dados por uma nova empresa de jogos  </h2>
+                <CampoTexto obrigatorio={true} 
+                label='Nome' 
+                placeholder='Digite o nome da empresa'
+                valor = {novaEmpresa}                
+                aoAlterado ={valor =>setnovaEmpresa(valor)}
+                />
+                <CampoTexto obrigatorio={true}
+                 label='cor'
+                  placeholder='Digite a cor'
+                  valor = {novaCor}                
+                aoAlterado ={valor =>setnovaCor(valor)}
+                  />
+                <Botao> Cria Empresa </Botao>
             </form>
         </section>
     )
