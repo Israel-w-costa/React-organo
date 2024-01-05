@@ -1,5 +1,5 @@
 import "./Formulario.css"
-import CampoTexto from "../CampoTexto"
+import Campo from "../Campo"
 import ListaSuspensa from '../ListaSuspensa';
 import Botao from "../Botao";
 import { useState } from "react";
@@ -31,19 +31,19 @@ const Formulario = (props) => {
         <section className="formulario" >
             <form onSubmit={aoSalvar}>
             <h2>Preença os dados para criar o card do jogo  </h2>
-                <CampoTexto obrigatorio={true} 
+                <Campo obrigatorio={true} 
                 label='Nome' 
                 placeholder='Digite o seu nome'
                 valor = {nome}                
                 aoAlterado ={valor =>setNome(valor)}
                 />
-                <CampoTexto obrigatorio={true}
+                <Campo obrigatorio={true}
                  label='Ano do lançamento'
                   placeholder='Digite o ano do lançamento'
                   valor = {ano}                
                 aoAlterado ={valor =>setAno(valor)}
                   />
-                <CampoTexto label='Imagem'
+                <Campo label='Imagem'
                  placeholder='Digite o endereço de imagem'
                  valor = {imagem}                
                 aoAlterado ={valor =>setImagem(valor)}
@@ -66,14 +66,15 @@ const Formulario = (props) => {
               setnovaEmpresa('')
               }}>
             <h2>Preença os dados por uma nova empresa de jogos  </h2>
-                <CampoTexto obrigatorio={true} 
+                <Campo obrigatorio={true} 
                 label='Nome' 
                 placeholder='Digite o nome da empresa'
                 valor = {novaEmpresa}                
                 aoAlterado ={valor =>setnovaEmpresa(valor)}
                 />
-                <CampoTexto obrigatorio={true}
+                <Campo obrigatorio={true}
                  label='cor'
+                 type='color'
                   placeholder='Digite a cor'
                   valor = {novaCor}                
                 aoAlterado ={valor =>setnovaCor(valor)}
